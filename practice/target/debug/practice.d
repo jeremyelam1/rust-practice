@@ -1,1 +1,1 @@
-/home/lazyspell/Documents/projects/rust/rust-practice/practice/target/debug/practice: /home/lazyspell/Documents/projects/rust/rust-practice/practice/src/main.rs
+/home/lazyspell/Documents/projects/rust/rust-practice/practice/target/debug/practice: /home/lazyspell/Documents/projects/rust/rust-practice/practice/src/main.rs /home/lazyspell/Documents/projects/rust/rust-practice/practice/src/variables/mod.rs /home/lazyspell/Documents/projects/rust/rust-practice/practice/src/variables/variables.rs

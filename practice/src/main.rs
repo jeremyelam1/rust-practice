@@ -1,51 +1,63 @@
+// Declare the helpers module (this tells Rust to include helpers.rs)
+mod variables; // Declare the variables module (this tells Rust to include variables/mod.rs)
+
 fn main() {
     println!("Hello, world!");
 
-    let n1 = 1;
-
-    println!("{}", n1);
-
-    let no_variable = five_loop();
-
-    println!("{}", no_variable);
-
-    println!("{}", variable_name_loop());
-
-    println!("{:?}", vector_slice());
+    // Call functions from the variables module
+    variables::variables::varable_one();
+    variables::variables::varable_two();
+    variables::variables::variable_three();
+    variables::variables::variable_four();
+    variables::variables::variable_five();
+    variables::variables::variable_six();
 }
 
-fn five_loop() -> i32 {
-    let mut counter = 0;
-
-    loop {
-        counter += 1;
-
-        if counter == 5 {
-            break counter;
-        };
-    }
-}
-
-fn variable_name_loop() -> i32 {
-    let mut counter = 0;
-
-    let result = loop {
-        counter += 1;
-
-        if counter == 10 {
-            break counter;
-        };
-    };
-
-    result
-}
-
-fn vector_slice() -> Vec<String> {
-    let mut slice = vec![];
-    slice.push("hello world".to_string());
-
-    return slice;
-}
+// fn five_loop() -> i32 {
+//     let mut counter = 0;
+//
+//     loop {
+//         counter += 1;
+//
+//         if counter == 5 {
+//             break counter;
+//         };
+//     }
+// }
+//
+// fn variable_name_loop() -> i32 {
+//     let mut counter = 0;
+//
+//     let result = loop {
+//         counter += 1;
+//
+//         if counter == 10 {
+//             break counter;
+//         };
+//     };
+//
+//     result
+// }
+//
+// fn vector_slice() -> Vec<String> {
+//     let mut slice = vec![];
+//     slice.push("hello world".to_string());
+//
+//     return slice;
+// }
+//
+// fn vector_int32() -> Vec<i32> {
+//     let mut slice = vec![];
+//     for i in 0..6 {
+//         slice.push(i)
+//     }
+//
+//     slice
+// }
+//
+// fn collect_vector_int32() -> Vec<i32> {
+//     (-10..8).collect()
+// }
 
 // Example struct
 // struct Person {
