@@ -1,16 +1,32 @@
 // Declare the helpers module (this tells Rust to include helpers.rs)
+mod functions;
 mod variables; // Declare the variables module (this tells Rust to include variables/mod.rs)
-
+               //
 fn main() {
     println!("Hello, world!");
 
+    println!("____________________________________________");
+    println!("Function Practice");
+    functions::functions::execute_call_me();
+    functions::functions::function_two();
+    println!("############################################");
+    functions::functions::func_three(4);
+    let odd_response = functions::functions::func_four(15); // odo response - 12
+    let even_response = functions::functions::func_four(15);
+    println!("odd respnse: {odd_response}, even_response{even_response}");
+    let five = functions::functions::func_five(5);
+    println!("result {five}");
+
+    println!("____________________________________________");
     // Call functions from the variables module
+    println!("Variables Practice");
     variables::variables::varable_one();
     variables::variables::varable_two();
     variables::variables::variable_three();
     variables::variables::variable_four();
     variables::variables::variable_five();
     variables::variables::variable_six();
+    println!("____________________________________________")
 }
 
 // fn five_loop() -> i32 {
