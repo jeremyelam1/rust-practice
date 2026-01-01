@@ -1,9 +1,19 @@
 // Declare the helpers module (this tells Rust to include helpers.rs)
 mod functions;
+mod ifs;
 mod variables; // Declare the variables module (this tells Rust to include variables/mod.rs)
                //
 fn main() {
     println!("Hello, world!");
+
+    println!("____________________________________________");
+    let b_bigger = ifs::ifs::if_one_bigger(10, 11); // 11 should be returned
+    let a_bigger = ifs::ifs::if_one_bigger(12, 11); // 12 should be returned
+    println!("b is bigger {b_bigger}, a is bigger {a_bigger}");
+    let picky = ifs::ifs::picky_eater("strawberry");
+    println!("{picky}");
+    let habit = ifs::ifs::animal_habitat("snake");
+    println!("{habit}");
 
     println!("____________________________________________");
     println!("Function Practice");
