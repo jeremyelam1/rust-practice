@@ -13,6 +13,8 @@ fn main() {
     let sem_one = move_semantics::semantics::semantics_one(vec![1, 2, 3, 4, 5]);
     move_semantics::semantics::semantics_two();
     move_semantics::semantics::move_semantics_three();
+    move_semantics::semantics::move_semantics_four();
+    move_semantics::semantics::move_semantics_five();
 
     println!("{ :? }", sem_one);
 

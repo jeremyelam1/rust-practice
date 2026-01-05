@@ -20,3 +20,38 @@ pub fn move_semantics_three() {
 
     println!("og: {:?}, new: {:?}", vec0, vec1);
 }
+
+pub fn move_semantics_four() {
+    let mut x = Vec::new();
+    let y = &mut x;
+    y.push(42);
+    println!("y answer {:?}", y);
+
+    let z = &mut x;
+    z.push(13);
+
+    println!("z answer {:?}", z)
+}
+
+// TODO: Fix the compiler errors without changing anything except adding or
+// removing references (the character `&`).
+
+// Shouldn't take ownership
+fn get_char(data: &str) -> char {
+    data.chars().last().unwrap()
+}
+
+// Should take ownership
+fn string_uppercase(data: &str) -> String {
+    data.to_uppercase()
+}
+
+pub fn move_semantics_five() {
+    let data = "Rust is great!".to_string();
+
+    get_char(&data);
+
+    let result = string_uppercase(&data);
+
+    println!("sem_five result: {}", result);
+}
