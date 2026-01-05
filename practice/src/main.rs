@@ -1,62 +1,68 @@
-use crate::vec::vec::vec_two;
-
 mod functions;
-mod ifs;
+mod ifs_practice;
 mod move_semantics;
 mod primitive;
 mod variables; // Declare the variables module (this tells Rust to include variables/mod.rs)
-mod vec;
+mod vector;
 //
 fn main() {
     println!("Hello, world!");
+    println!("____________________________________________");
+    println!("semantics practice");
 
-    let result = vec::vec::vec_one();
-    println!("{:?}", result);
-    let two = vec![2, 3, 4, 5];
-    let two_result = vec_two(&two);
-    println!("{:?}", two_result);
+    let sem_one = move_semantics::semantics::semantics_one(vec![1, 2, 3, 4, 5]);
+    move_semantics::semantics::semantics_two();
+    move_semantics::semantics::move_semantics_three();
+
+    println!("{ :? }", sem_one);
 
     let run = false;
     if run {
         println!("____________________________________________");
+        println!("vec practice");
+        let result = vector::vec::vec_one();
+        println!("{:?}", result);
+        let two = vec![2, 3, 4, 5];
+        let two_result = vector::vec::vec_two(&two);
+        println!("{:?}", two_result);
+        println!("____________________________________________");
         println!("Primitive Practice");
-        primitive::primitive::primitive_bool();
-        primitive::primitive::primitive_two();
-        primitive::primitive::prim_three();
-        primitive::primitive::prim_five();
-        primitive::primitive::prim_six();
-
+        primitive::prim::primitive_bool();
+        primitive::prim::primitive_two();
+        primitive::prim::prim_three();
+        primitive::prim::prim_five();
+        primitive::prim::prim_six();
         println!("____________________________________________");
         println!("if Practice");
-        let b_bigger = ifs::ifs::if_one_bigger(10, 11); // 11 should be returned
-        let a_bigger = ifs::ifs::if_one_bigger(12, 11); // 12 should be returned
+        let b_bigger = ifs_practice::ifs::if_one_bigger(10, 11); // 11 should be returned
+        let a_bigger = ifs_practice::ifs::if_one_bigger(12, 11); // 12 should be returned
         println!("b is bigger {b_bigger}, a is bigger {a_bigger}");
-        let picky = ifs::ifs::picky_eater("strawberry");
+        let picky = ifs_practice::ifs::picky_eater("strawberry");
         println!("{picky}");
-        let habit = ifs::ifs::animal_habitat("snake");
+        let habit = ifs_practice::ifs::animal_habitat("snake");
         println!("{habit}");
 
         println!("____________________________________________");
         println!("Function Practice");
-        functions::functions::execute_call_me();
-        functions::functions::function_two();
+        functions::func::execute_call_me();
+        functions::func::function_two();
         println!("############################################");
-        functions::functions::func_three(4);
-        let odd_response = functions::functions::func_four(15); // odo response - 12
-        let even_response = functions::functions::func_four(15);
+        functions::func::func_three(4);
+        let odd_response = functions::func::func_four(15); // odo response - 12
+        let even_response = functions::func::func_four(15);
         println!("odd respnse: {odd_response}, even_response{even_response}");
-        let five = functions::functions::func_five(5);
+        let five = functions::func::func_five(5);
         println!("result {five}");
 
         println!("____________________________________________");
         // Call functions from the variables module
         println!("Variables Practice");
-        variables::variables::varable_one();
-        variables::variables::varable_two();
-        variables::variables::variable_three();
-        variables::variables::variable_four();
-        variables::variables::variable_five();
-        variables::variables::variable_six();
+        variables::var::varable_one();
+        variables::var::varable_two();
+        variables::var::variable_three();
+        variables::var::variable_four();
+        variables::var::variable_five();
+        variables::var::variable_six();
         println!("____________________________________________")
     }
 }
