@@ -2,24 +2,30 @@ mod functions;
 mod ifs_practice;
 mod move_semantics;
 mod primitive;
+mod structures;
 mod variables; // Declare the variables module (this tells Rust to include variables/mod.rs)
 mod vector;
 //
 fn main() {
     println!("Hello, world!");
+
     println!("____________________________________________");
-    println!("semantics practice");
+    println!("structure practice");
 
-    let sem_one = move_semantics::semantics::semantics_one(vec![1, 2, 3, 4, 5]);
-    move_semantics::semantics::semantics_two();
-    move_semantics::semantics::move_semantics_three();
-    move_semantics::semantics::move_semantics_four();
-    move_semantics::semantics::move_semantics_five();
-
-    println!("{ :? }", sem_one);
+    structures::structs::structs_one();
 
     let run = false;
     if run {
+        println!("____________________________________________");
+        println!("semantics practice");
+
+        let sem_one = move_semantics::semantics::semantics_one(vec![1, 2, 3, 4, 5]);
+        move_semantics::semantics::semantics_two();
+        move_semantics::semantics::move_semantics_three();
+        move_semantics::semantics::move_semantics_four();
+        move_semantics::semantics::move_semantics_five();
+
+        println!("{ :? }", sem_one);
         println!("____________________________________________");
         println!("vec practice");
         let result = vector::vec::vec_one();
