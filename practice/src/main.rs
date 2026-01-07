@@ -13,6 +13,18 @@ fn main() {
     println!("structure practice");
 
     structures::structs::structs_one();
+    structures::structs::strtucts_two();
+
+    let structs_three =
+        structures::structs::Package::new(String::from("usa"), String::from("usa"), 4);
+
+    let international = structs_three.is_international();
+    println!("{}", international);
+
+    let price = structs_three.get_fees(40);
+    println!("price is: {}", price);
+
+    println!("{}", structs_three.sender_country);
 
     let run = false;
     if run {
