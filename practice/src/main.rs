@@ -1,3 +1,4 @@
+mod enums_practice;
 mod functions;
 mod ifs_practice;
 mod move_semantics;
@@ -10,24 +11,48 @@ fn main() {
     println!("Hello, world!");
 
     println!("____________________________________________");
-    println!("structure practice");
+    println!("enum practice");
 
-    structures::structs::structs_one();
-    structures::structs::strtucts_two();
+    enums_practice::enums::enum_one();
 
-    let structs_three =
-        structures::structs::Package::new(String::from("usa"), String::from("usa"), 4);
-
-    let international = structs_three.is_international();
-    println!("{}", international);
-
-    let price = structs_three.get_fees(40);
-    println!("price is: {}", price);
-
-    println!("{}", structs_three.sender_country);
+    println!("********************************************");
+    enums_practice::enums::enum_two();
 
     let run = false;
     if run {
+        println!("____________________________________________");
+        println!("structure practice");
+
+        structures::structs::structs_one();
+        structures::structs::strtucts_two();
+
+        let structs_three =
+            structures::structs::Package::new(String::from("usa"), String::from("usa"), 4);
+
+        let international = structs_three.is_international();
+        println!("{}", international);
+
+        let price = structs_three.get_fees(40);
+        println!("price is: {}", price);
+
+        println!("{}", structs_three.sender_country);
+
+        println!("____________________________________________");
+        println!("structure practice");
+
+        structures::structs::structs_one();
+        structures::structs::strtucts_two();
+
+        let structs_three =
+            structures::structs::Package::new(String::from("usa"), String::from("usa"), 4);
+
+        let international = structs_three.is_international();
+        println!("{}", international);
+
+        let price = structs_three.get_fees(40);
+        println!("price is: {}", price);
+
+        println!("{}", structs_three.sender_country);
         println!("____________________________________________");
         println!("semantics practice");
 
