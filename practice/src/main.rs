@@ -3,6 +3,7 @@ mod functions;
 mod ifs_practice;
 mod move_semantics;
 mod primitive;
+mod strings_practice;
 mod structures;
 mod variables; // Declare the variables module (this tells Rust to include variables/mod.rs)
 mod vector;
@@ -11,15 +12,26 @@ fn main() {
     println!("Hello, world!");
 
     println!("____________________________________________");
-    println!("enum practice");
+    println!("string practice");
 
-    enums_practice::enums::enum_one();
+    let str_one = strings_practice::strings::string_one();
+    println!("string one result: {}", str_one);
 
-    println!("********************************************");
-    enums_practice::enums::enum_two();
+    strings_practice::strings::string_two();
+    strings_practice::strings::string_three();
 
     let run = false;
     if run {
+        println!("____________________________________________");
+        println!("enum practice");
+
+        enums_practice::enums::enum_one();
+
+        println!("********************************************");
+        enums_practice::enums::enum_two();
+
+        println!("********************************************");
+        enums_practice::enums::enum_three();
         println!("____________________________________________");
         println!("structure practice");
 

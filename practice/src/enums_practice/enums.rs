@@ -117,4 +117,35 @@ impl State {
     }
 }
 
-pub fn ennum_three() {}
+pub fn enum_three() {
+    let mut state = State {
+        width: 0,
+        height: 0,
+        position: Point { x: 0, y: 0 },
+        message: String::new(),
+        color: (0, 0, 0),
+        quit: false,
+    };
+
+    let messages = [
+        Message3::Resize {
+            width: 100,
+            height: 200,
+        },
+        Message3::Move(Point { x: 50, y: 75 }),
+        Message3::Echo(String::from("Hello from enum_three!")),
+        Message3::ChangeColor(255, 128, 64),
+        Message3::Quit,
+    ];
+
+    for message in messages {
+        state.process(message);
+    }
+
+    println!("Final state:");
+    println!("  Size: {}x{}", state.width, state.height);
+    println!("  Position: ({}, {})", state.position.x, state.position.y);
+    println!("  Message: {}", state.message);
+    println!("  Color: {:?}", state.color);
+    println!("  Quit: {}", state.quit);
+}
