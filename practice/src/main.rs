@@ -1,6 +1,7 @@
 mod enums_practice;
 mod functions;
 mod ifs_practice;
+mod modules_practice;
 mod move_semantics;
 mod primitive;
 mod strings_practice;
@@ -10,21 +11,26 @@ mod vector;
 //
 fn main() {
     println!("Hello, world!");
-
     println!("____________________________________________");
-    println!("Function Practice");
-    functions::execute_call_me();
-    functions::function_two();
-    println!("############################################");
-    functions::func_three(4);
-    let odd_response = functions::func_four(15); // odo response - 12
-    let even_response = functions::func_four(15);
-    println!("odd respnse: {odd_response}, even_response{even_response}");
-    let five = functions::func_five(5);
-    println!("result {five}");
+    println!("modules practice");
+    modules_practice::modules_one();
+    modules_practice::modules_two();
+    modules_practice::modules_three();
 
     let run = false;
     if run {
+        println!("____________________________________________");
+        println!("Function Practice");
+        functions::execute_call_me();
+        functions::function_two();
+        println!("############################################");
+        functions::func_three(4);
+        let odd_response = functions::func_four(15); // odo response - 12
+        let even_response = functions::func_four(15);
+        println!("odd respnse: {odd_response}, even_response{even_response}");
+        let five = functions::func_five(5);
+        println!("result {five}");
+
         println!("____________________________________________");
         println!("string practice");
 
