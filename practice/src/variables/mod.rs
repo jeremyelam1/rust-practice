@@ -1,1 +1,3 @@
-pub mod var;
+pub mod vars;
+
+pub use vars::*;
