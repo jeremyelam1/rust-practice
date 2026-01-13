@@ -1,5 +1,6 @@
 mod enums_practice;
 mod functions;
+mod hashmap_practice;
 mod ifs_practice;
 mod modules_practice;
 mod move_semantics;
@@ -12,13 +13,18 @@ mod vector;
 fn main() {
     println!("Hello, world!");
     println!("____________________________________________");
-    println!("modules practice");
-    modules_practice::modules_one();
-    modules_practice::modules_two();
-    modules_practice::modules_three();
+    println!("hashmap practice");
 
+    let hash_one = hashmap_practice::hashmap_one();
+    println!("{:?}", hash_one);
     let run = false;
     if run {
+        println!("____________________________________________");
+        println!("modules practice");
+        modules_practice::modules_one();
+        modules_practice::modules_two();
+        modules_practice::modules_three();
+
         println!("____________________________________________");
         println!("Function Practice");
         functions::execute_call_me();
