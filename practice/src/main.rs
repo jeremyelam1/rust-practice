@@ -17,6 +17,14 @@ fn main() {
 
     let hash_one = hashmap_practice::hashmap_one();
     println!("{:?}", hash_one);
+
+    // Create a new HashMap with Fruit enum keys for hash_two
+    let mut fruit_basket = std::collections::HashMap::new();
+    fruit_basket.insert(hashmap_practice::Fruit::Apple, 3);
+    fruit_basket.insert(hashmap_practice::Fruit::Lychee, 10);
+    hashmap_practice::hash_two(&mut fruit_basket);
+    println!("Fruit basket: {:?}", fruit_basket);
+
     let run = false;
     if run {
         println!("____________________________________________");
